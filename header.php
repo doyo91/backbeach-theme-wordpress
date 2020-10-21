@@ -32,12 +32,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="top-header-holder">
 			<div class="container">
 				<div class="row align-items-end">
-					<div class="col-4">
+					<div class="col-md-4">
 						<a href="/" class="logo-holder">
 							<img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="The Backbeach Logo" class="logo">
 						</a>
 					</div>
-					<div class="col-6">
+					<div class="col-md-6">
 						<div class="reservation-holder">
 							<div class="contact-holder">
 								<a href="#" class="phone">
@@ -48,13 +48,39 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<i class="fa fa-map"></i>
 									Lot 757, Ocean Drive, Bunbury
 								</a>
+								<div class="social-media-holder-tablet">
+									<a href="#">
+										<i class="fa fa-instagram"></i>
+									</a>
+									<a href="#">
+										<i class="fa fa-facebook-square"></i>
+									</a>
+								</div>
+								<button class="navbar-toggler md-view" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+									<div class="menu-title">
+										Menu
+									</div>
+									<div>
+										<div class="bar"></div>
+										<div class="bar"></div>
+										<div class="bar"></div>
+									</div>
+								</button>
 							</div>
 							<a href="#" class="reservation-btn">
 								Make a Reservation
 							</a>
 						</div>
 					</div>
-					<div class="col">
+					<div class="col-">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="menu-title">
+								Menu
+							</div>
+						</button>
 						<div class="social-media-holder">
 							<a href="#">
 								<i class="fa fa-instagram"></i>
@@ -65,6 +91,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 
@@ -83,9 +110,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				
 
 				<!-- The WordPress Menu goes here -->
 				<?php
@@ -109,3 +134,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+
+	<div class="container">
+		<div class="mobile-logo-holder">
+			<div>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="The Backbeach Logo" >
+				</a>
+			</div>
+			<div>
+				<a href="#" class="reservation-btn mobile">
+					Make a Reservation
+				</a>
+			</div>
+		</div>
+	</div>
