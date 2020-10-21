@@ -14,6 +14,7 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 18px;
 	line-height: 1.25;
+	height: 8000px;
 
 	// font-family: 'Fredericka the Great', cursive;
 }
@@ -65,7 +66,8 @@ body {
 }
 
 #wrapper-navbar {
-	margin-bottom: -360px;
+	position: relative;
+	z-index: 100;
 
 	@media (max-width: $lg) {
 		margin-bottom: 0px;
@@ -271,15 +273,88 @@ body {
 // Home
 // ****************************
 .home-banner {
-	height: 1080px;
-	background-color: #ccc;
+	height: 650px;
 	background-image: url(../img/home-banner.jpg);
 	background-size: cover;
-	background-position: top center;
+	background-position: center;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 50px;
+	position: relative;
 
+	@media (max-width: $xl) {
+		padding-bottom: 40px;
+		height: 500px;
+	}
 	@media (max-width: $lg) {
-		background-position: top -350px center;
+		padding-bottom: 30px;
+		height: 350px;
+	}
+	@media (max-width: $md) {
+		padding-bottom: 30px;
+		height: 250px;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		height: 230px;
+		background: linear-gradient(white, rgba(white, 0));
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		@media (max-width: $xl) {
+			height: 200px;
+		}
+		@media (max-width: $lg) {
+			height: 150px;
+		}
+		@media (max-width: $md) {
+			height: 125px;
+		}
+	}
+	&::after {
+		content: "";
+		display: block;
+		height: 230px;
+		background: linear-gradient(rgba(white, 0), white);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@media (max-width: $xl) {
+			height: 200px;
+		}
+		@media (max-width: $lg) {
+			height: 150px;
+		}
+		@media (max-width: $md) {
+			height: 125px;
+		}
+	}
+
+	h1 {
+		font-size: 100px;
+		font-family: "Fredericka the Great", cursive;
+		position: relative;
+		z-index: 99;
+
+		@media (max-width: $xl) {
+			font-size: 90px;
+		}
+		@media (max-width: $lg) {
+			font-size: 72px;
+		}
+
+		@media (max-width: $md) {
+			font-size: 48px;
+		}
+		@media (max-width: $sm) {
+			font-size: 36px;
+		}
 	}
 }
 

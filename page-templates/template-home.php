@@ -14,7 +14,9 @@ get_header();
 ?>
 
 <div class="home-banner">
-
+    <div class="container">
+        <h1>A Dining Experience</h1>
+    </div>
 </div>
 
 
