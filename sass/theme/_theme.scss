@@ -1,8 +1,69 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+$primary: #223a47;
+$secondary: #f27257;
+$terciary: #5da0aa;
+
+// viewports
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 18px;
+	line-height: 1.25;
+
+	// font-family: 'Fredericka the Great', cursive;
+}
+
+// ****************************
+// Header
+// ****************************
+#wrapper-navbar {
+	margin-bottom: -280px;
+
+	.top-header-holder {
+		height: 260px;
+		background-color: #f1f1f1;
+	}
+
+	#main-nav {
+		border-bottom: 1px solid rgba($terciary, 0.5);
+		padding: 0;
+
+		ul {
+			flex: 1;
+			justify-content: space-between;
+			li {
+				a {
+					font-weight: 600;
+					font-size: 22px;
+					text-transform: uppercase;
+					padding: 1.5em 0.5em;
+				}
+				&.current_page_item {
+					a {
+						color: $secondary;
+					}
+				}
+			}
+		}
+	}
+}
+// ****************************
+// Home
+// ****************************
 .home-banner {
 	height: 1080px;
 	background-color: #ccc;
 	background-image: url(../img/home-banner.jpg);
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
+
+// ****************************
+// Footer
+// ****************************
