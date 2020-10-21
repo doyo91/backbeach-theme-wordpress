@@ -18,6 +18,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -27,42 +29,88 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar">
+		<div class="top-header-holder">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-md-4">
+						<a href="/" class="logo-holder">
+							<img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="The Backbeach Logo" class="logo">
+						</a>
+					</div>
+					<div class="col-md-6">
+						<div class="reservation-holder">
+							<div class="contact-holder">
+								<a href="#" class="phone">
+									<i class="fa fa-phone"></i>
+									08 9791 6575
+								</a>
+								<a href="#" class="address">
+									<i class="fa fa-map"></i>
+									Lot 757, Ocean Drive, Bunbury
+								</a>
+								<div class="social-media-holder-tablet">
+									<a href="#">
+										<i class="fa fa-instagram"></i>
+									</a>
+									<a href="#">
+										<i class="fa fa-facebook-square"></i>
+									</a>
+								</div>
+								<button class="navbar-toggler md-view" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+									<div class="menu-title">
+										Menu
+									</div>
+									<div>
+										<div class="bar"></div>
+										<div class="bar"></div>
+										<div class="bar"></div>
+									</div>
+								</button>
+							</div>
+							<a href="#" class="reservation-btn">
+								Make a Reservation
+							</a>
+						</div>
+					</div>
+					<div class="col-">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="menu-title">
+								Menu
+							</div>
+						</button>
+						<div class="social-media-holder">
+							<a href="#">
+								<i class="fa fa-instagram"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-facebook-square"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 			</h2>
 
-		<?php if ( 'container' === $container ) : ?>
+		
 			<div class="container">
-		<?php endif; ?>
+		
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
+					
 
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-						<?php
-					} else {
-						the_custom_logo();
-					}
-					?>
-					<!-- end custom logo -->
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				
 
 				<!-- The WordPress Menu goes here -->
 				<?php
@@ -71,7 +119,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
+						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
@@ -79,10 +127,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
-			<?php if ( 'container' === $container ) : ?>
+			
 			</div><!-- .container -->
-			<?php endif; ?>
+			
 
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+
+	<div class="container">
+		<div class="mobile-logo-holder">
+			<div>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="The Backbeach Logo" >
+				</a>
+			</div>
+			<div>
+				<a href="#" class="reservation-btn mobile">
+					Make a Reservation
+				</a>
+			</div>
+		</div>
+	</div>
