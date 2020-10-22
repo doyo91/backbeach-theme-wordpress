@@ -162,5 +162,24 @@ get_header();
    </div> 
 </div>
 <!-- END About -->
+<!-- Testimonials -->
+<div class="home-testimonials">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <h2>Happy Customers</h2>
+                <div class="testimonial-holder">
+                    <p>Ah! what a place. I could go have breakfast wvery single day and not get tired by the views. The staff are very kind and helpful, and the food is AMAZING! A MUST visit place if you're visitting Bunbury!</p>
+                    <div class="separator"></div>
+                    <div class="author">Saad Ulde</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Testimonials -->
+
 <?php
 get_footer();
