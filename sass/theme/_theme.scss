@@ -7,13 +7,14 @@ $terciary: #5da0aa;
 // viewports
 $xl: 1440px;
 $lg: 992px;
-$md: 768px;
+$md: 767px;
 $sm: 576px;
 
 body {
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 18px;
 	line-height: 1.25;
+	height: 8000px;
 
 	// font-family: 'Fredericka the Great', cursive;
 }
@@ -65,7 +66,8 @@ body {
 }
 
 #wrapper-navbar {
-	margin-bottom: -360px;
+	position: relative;
+	z-index: 100;
 
 	@media (max-width: $lg) {
 		margin-bottom: 0px;
@@ -241,7 +243,6 @@ body {
 
 	#main-nav {
 		border-bottom: 1px solid rgba($terciary, 0.5);
-		padding: 0;
 
 		ul {
 			flex: 1;
@@ -270,18 +271,204 @@ body {
 // ****************************
 // Home
 // ****************************
+
+// Hero
 .home-banner {
-	height: 1080px;
-	background-color: #ccc;
+	height: 650px;
 	background-image: url(../img/home-banner.jpg);
 	background-size: cover;
-	background-position: top center;
+	background-position: center;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 50px;
+	position: relative;
 
+	@media (max-width: $xl) {
+		padding-bottom: 40px;
+		height: 500px;
+	}
 	@media (max-width: $lg) {
-		background-position: top -350px center;
+		padding-bottom: 30px;
+		height: 350px;
+	}
+	@media (max-width: $md) {
+		padding-bottom: 30px;
+		height: 250px;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		height: 230px;
+		background: linear-gradient(white, rgba(white, 0));
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		@media (max-width: $xl) {
+			height: 200px;
+		}
+		@media (max-width: $lg) {
+			height: 150px;
+		}
+		@media (max-width: $md) {
+			height: 125px;
+		}
+	}
+	&::after {
+		content: "";
+		display: block;
+		height: 230px;
+		background: linear-gradient(rgba(white, 0), white);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@media (max-width: $xl) {
+			height: 200px;
+		}
+		@media (max-width: $lg) {
+			height: 150px;
+		}
+		@media (max-width: $md) {
+			height: 125px;
+		}
+	}
+
+	h1 {
+		font-size: 100px;
+		font-family: "Fredericka the Great", cursive;
+		position: relative;
+		z-index: 99;
+
+		@media (max-width: $xl) {
+			font-size: 90px;
+		}
+		@media (max-width: $lg) {
+			font-size: 72px;
+		}
+
+		@media (max-width: $md) {
+			font-size: 48px;
+		}
+		@media (max-width: $sm) {
+			font-size: 36px;
+		}
 	}
 }
+
+.home-call-to-action {
+	@media (max-width: $md) {
+		text-align: center;
+	}
+	.call-to-action {
+		border-radius: 50%;
+		padding-bottom: 100%;
+		background-color: $secondary;
+		position: relative;
+		display: block;
+
+		@media (max-width: $md) {
+			width: 66%;
+			padding-bottom: 66%;
+			display: inline-block;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		@media (max-width: $sm) {
+			width: 85%;
+			padding-bottom: 85%;
+		}
+
+		.image {
+			background-image: url(../img/call-to-action-1.png);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			right: 30px;
+			bottom: 30px;
+			border-radius: 50%;
+			transition: ease 0.3s all;
+			opacity: 0.85;
+
+			@media (max-width: $xl) {
+				top: 20px;
+				left: 20px;
+				right: 20px;
+				bottom: 20px;
+			}
+		}
+
+		.title {
+			font-size: 26px;
+			position: absolute;
+			bottom: 45px;
+			left: 50%;
+			right: -15px;
+			padding: 0.5em;
+			text-align: center;
+			background-color: $terciary;
+			color: white;
+			border: 1px dashed white;
+			border-radius: 0.25em;
+			transition: ease 0.3s all;
+			font-family: "Fredericka the Great", cursive;
+
+			@media (max-width: $xl) {
+				font-size: 20px;
+			}
+
+			@media (max-width: $lg) and (min-width: $md) {
+				left: 0%;
+				right: 0%;
+				bottom: -15%;
+			}
+		}
+
+		&.second {
+			background-color: $terciary;
+
+			.image {
+				background-image: url(../img/call-to-action-2.png);
+			}
+			.title {
+				background-color: $primary;
+			}
+		}
+		&.third {
+			background-color: $primary;
+
+			.image {
+				background-image: url(../img/call-to-action-3.png);
+			}
+			.title {
+				background-color: $secondary;
+			}
+		}
+
+		&:hover {
+			.image {
+				top: 5px;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;
+				opacity: 1;
+			}
+			.title {
+				left: 0%;
+				background-color: rgba($color: white, $alpha: 0.85);
+				color: $primary;
+			}
+		}
+	}
+}
+
+// About
 
 // ****************************
 // Footer
