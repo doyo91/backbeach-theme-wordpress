@@ -46,7 +46,7 @@ get_header();
 </div>
 <!-- END Hero -->
 
-<!-- About -->
+<!-- Welcome -->
 <div class="home-welcome">
     <div class="title-holder">
         <div class="container">
@@ -75,7 +75,34 @@ get_header();
         </div>
     </div>
 </div>
-<!-- END About -->
+<!-- END Welcome -->
+<!-- News -->
+<div class="home-news">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-5 col-md-6 col-8 m-auto">
+            <a href="#" class="news-img">
+                    <div class="image"></div>
+                    <div class="date">10.06.2020</div>
+                    <div class="category">What's On</div>
+                </a>
+            </div>
+            <div class="col-xl-1 d-none d-xl-block"></div>
+            <div class="col-md-6">
+                <h2>Mother's Day</h2>
+                <div class="content-holder">
+                    Join us to celebrate your mum this Mother's Day.
+                     Breakfast and Lunch is pretty full but we're taking dinner bookings so you can enjoy the best of our superb location right on the beach. All dinner reservations recive a complimentary box of chocolates to...  
+                </div>
+                <a href="#" class="button">Read More
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END News -->
 
 <?php
 get_footer();
