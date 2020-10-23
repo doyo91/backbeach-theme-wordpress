@@ -180,6 +180,27 @@ get_header();
     </div>
 </div>
 <!-- END Testimonials -->
+<!-- Subscribe -->
+<div class="home-subscribe">
+    <div class="title-holder">
+        <div class="container">
+            <h2>
+                <span>Sign Up</span>
+                Subscribe to our email newsletter
+            </h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11">
+                <?php echo do_shortcode( '[contact-form-7 id="18" title="Newsletter Subscription"]' ) ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Subscribe -->
+
 
 <?php
 get_footer();
