@@ -105,14 +105,14 @@ get_header();
 <!-- END News -->
 <!-- About -->
 <div class="home-about">
-<div class="bg-image">
-    <div class="top-overlay">
-        <img src="<?php echo get_template_directory_uri() ?>/img/home-about-top.svg" alt="Cutout Top" width="100%">
+    <div class="bg-image">
+        <div class="top-overlay">
+            <img src="<?php echo get_template_directory_uri() ?>/img/home-about-top.svg" alt="Cutout Top" width="100%">
+        </div>
+        <div class="bottom-overlay">
+            <img src="<?php echo get_template_directory_uri() ?>/img/home-about-bottom.svg" alt="Cutout Bottom" width="100%">
+        </div>
     </div>
-    <div class="bottom-overlay">
-        <img src="<?php echo get_template_directory_uri() ?>/img/home-about-bottom.svg" alt="Cutout Bottom" width="100%">
-    </div>
-</div>
     <div class="title-holder">
         <div class="container">
             <h2>
@@ -200,7 +200,61 @@ get_header();
     </div>
 </div>
 <!-- END Subscribe -->
-
+<!-- Social -->
+<div class="home-social">
+    <div class="title-holder">
+        <div class="container">
+            <h2>
+                <span>Socials</span>
+                Follow us on facebook & instagram
+            </h2>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11">
+                <div class="facebook-holder">
+                    <div class="title">
+                        <i class="fa fa-facebook-square"></i>
+                        What's new on facebook
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/call-to-action-1.png" alt="News Item" width="100%">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <div class="meta-data">
+                                    <div class="date">
+                                        <i class="fa fa-calendar"></i>
+                                        Posted 31 Jan 2020
+                                    </div>
+                                    <div class="likes">
+                                        <i class="fa fa-thumbs-up"></i>
+                                        24 Likes
+                                    </div>
+                                </div>
+                                <p>Check out the view (and the dolphins, they're out there today!) Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sunt corporis? Eum libero quis modi?</p>
+                                <a href="#" class="button">Read on Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-holder">
+                    <div class="title">
+                        <i class="fa fa-instagram"></i>
+                        @backbeachcafe
+                    </div>
+                    <div class="row">
+                    <?php echo do_shortcode( '[instagram-feed]' ) ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Social -->
 
 <?php
 get_footer();
