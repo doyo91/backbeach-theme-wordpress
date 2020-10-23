@@ -851,6 +851,8 @@ body {
 
 	@media (max-width: $md) {
 		margin-top: 0px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 	@media (max-width: $sm) {
 		margin-top: -50px;
@@ -898,6 +900,114 @@ body {
 		.author {
 			font-size: 30px;
 			font-family: "Fredericka the Great", cursive;
+		}
+	}
+}
+
+// Subscribe
+.home-subscribe {
+	@extend .home-about;
+
+	background-color: $primary;
+	margin: 0;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+	border-top: 2px dashed white;
+	border-bottom: 2px dashed white;
+
+	@media (max-width: $xl) {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	@media (max-width: $md) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: $sm) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-image: url(../img/subscribe-bg.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0.5;
+	}
+
+	.container {
+		position: relative;
+	}
+
+	h2 {
+		span {
+			transform: translate(140px, 25px);
+
+			@media (max-width: $xl) {
+				font-size: 120px;
+			}
+			@media (max-width: $lg) {
+				font-size: 60px;
+				transform: translate(60px, 10px);
+			}
+			@media (max-width: $md) {
+				font-size: 48px;
+				transform: translate(30px, 0px);
+			}
+		}
+		font-size: 70px;
+
+		@media (max-width: $xl) {
+			font-size: 60px;
+		}
+		@media (max-width: $lg) {
+			font-size: 36px;
+		}
+		@media (max-width: $md) {
+			font-size: 42px;
+		}
+	}
+
+	// form
+	form.init {
+		input {
+			width: 100%;
+			padding: 0.75em 1em;
+			font-size: 24px;
+			color: black;
+			background-color: white;
+			border: 2px dashed $primary-300;
+			height: auto;
+			min-height: auto;
+			line-height: initial;
+			border-radius: 10px;
+
+			@media (max-width: $xl) {
+				font-size: 20px;
+				margin-bottom: 30px;
+			}
+			@media (max-width: $md) {
+				font-size: 18px;
+			}
+
+			&[type="submit"] {
+				background-color: $secondary;
+				color: white;
+				font-family: "Fredericka the Great", cursive;
+
+				&:hover {
+					background-color: darken($secondary, 15%);
+					border: 2px dashed $primary-300;
+				}
+			}
 		}
 	}
 }
