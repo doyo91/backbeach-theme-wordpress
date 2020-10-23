@@ -1012,6 +1012,97 @@ body {
 	}
 }
 
+// Socials
+.home-social {
+	@extend .home-welcome;
+
+	.facebook-holder {
+		border: 2px dashed $secondary;
+		padding: 60px;
+		border-radius: 15px;
+		@media (max-width: $lg) {
+			padding: 30px;
+		}
+
+		.title {
+			font-family: "Fredericka the Great", cursive;
+			font-size: 52px;
+			margin-bottom: 60px;
+			color: $secondary-300;
+
+			@media (max-width: $xl) {
+				font-size: 48px;
+				margin-bottom: 45px;
+			}
+			@media (max-width: $lg) {
+				font-size: 36px;
+				margin-bottom: 30px;
+			}
+
+			.fa {
+				color: $primary;
+				margin-right: 0.5em;
+			}
+		}
+		.content {
+			@media (max-width: $lg) {
+				margin-top: 30px;
+			}
+
+			p {
+				font-weight: 400;
+				margin-bottom: 20px;
+			}
+			.meta-data {
+				display: flex;
+				border-bottom: 2px dashed $primary-300;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+
+				.date,
+				.likes {
+					font-size: 16px;
+					flex: 1;
+
+					.fa {
+						color: $primary-300;
+						font-size: 1.5em;
+						margin-right: 0.25em;
+					}
+				}
+			}
+		}
+	}
+
+	.instagram-holder {
+		margin-top: 75px;
+
+		@media (max-width: $md) {
+			margin-top: 50px;
+		}
+		.title {
+			font-family: "Fredericka the Great", cursive;
+			font-size: 52px;
+			margin-bottom: 60px;
+			color: $primary;
+
+			@media (max-width: $xl) {
+				font-size: 48px;
+				margin-bottom: 45px;
+			}
+			@media (max-width: $lg) {
+				font-size: 36px;
+				margin-bottom: 30px;
+			}
+
+			.fa {
+				color: $secondary;
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+
 // ****************************
 // Footer
 // ****************************
