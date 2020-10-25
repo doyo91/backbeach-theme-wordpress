@@ -78,7 +78,7 @@ get_header();
 <!-- END Welcome -->
 <!-- News -->
 <div class="home-news">
-    
+    <div class="bg-image"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-5 col-md-6 col-8 m-auto">
