@@ -16,7 +16,7 @@ body {
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 1.25;
-	height: 8000px;
+	height: auto;
 
 	// font-family: 'Fredericka the Great', cursive;
 	// font-family: "Pacifico", cursive;
@@ -1106,3 +1106,102 @@ body {
 // ****************************
 // Footer
 // ****************************
+footer {
+	#wrapper-footer {
+		@extend .home-welcome;
+		position: relative;
+		margin-bottom: 0;
+		.container,
+		.title-holder {
+			position: relative;
+		}
+
+		.bg-image {
+			position: absolute;
+			bottom: 0;
+			top: 0%;
+			left: 0;
+			right: 0;
+			background-image: url(../img/news-bg.png);
+			background-position: top center;
+			background-repeat: repeat;
+			background-size: contain;
+			opacity: 0.5;
+		}
+
+		// form
+		form.init {
+			input,
+			textarea {
+				width: 100%;
+				padding: 0.75em 1em;
+				font-size: 24px;
+				color: black;
+				background-color: white;
+				border: 2px dashed $primary-300;
+				height: auto;
+				min-height: auto;
+				line-height: initial;
+				border-radius: 10px;
+
+				@media (max-width: $xl) {
+					font-size: 20px;
+				}
+				@media (max-width: $md) {
+					font-size: 18px;
+				}
+
+				&[type="submit"] {
+					background-color: $secondary;
+					color: white;
+					font-family: "Fredericka the Great", cursive;
+
+					&:hover {
+						background-color: darken($secondary, 15%);
+						border: 2px dashed $primary-300;
+					}
+				}
+			}
+
+			input {
+				margin-bottom: 30px;
+			}
+
+			textarea {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.footer-warning {
+		background-color: $primary;
+		color: white;
+		padding: 60px;
+
+		@media (max-width: $sm) {
+			padding: 45px 20px;
+		}
+		.row {
+			display: flex;
+			align-items: center;
+			img {
+				width: 200px;
+				object-fit: cover;
+			}
+
+			@media (max-width: $md) {
+				flex-direction: column;
+				img {
+					width: 100px;
+					object-fit: cover;
+				}
+
+				h3 {
+					margin-top: 15px;
+				}
+				p {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}
